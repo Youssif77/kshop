@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
+import { NzCarouselComponent } from 'ng-zorro-antd/carousel';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
-  title = 'kshop';
-}
+export class AppComponent {}
