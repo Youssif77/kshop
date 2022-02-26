@@ -1,0 +1,150 @@
+.header {
+  color: var(--primary-color);
+
+  &__actions {
+    display: flex;
+    padding: 2.4rem;
+
+    &-img {
+      flex-basis: 10%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &-input {
+      margin-right: 3rem;
+      background-color: #efeef8;
+      border-radius: 0.8rem;
+      border: none;
+      color: inherit;
+
+      &:focus,
+      &:hover {
+        border: none;
+        box-shadow: none;
+      }
+
+      i {
+        font-size: 2.4rem;
+      }
+
+      input {
+        padding-right: 1rem;
+        background-color: #efeef8;
+        color: inherit;
+        border: none;
+
+        &::placeholder {
+          color: inherit;
+        }
+      }
+    }
+
+    &-user {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #efeef8;
+      cursor: pointer;
+      padding: 0 1rem;
+      border-radius: 0.8rem;
+      margin: 0px 1.4rem;
+    }
+
+    &-cart {
+      background-color: #efeef8;
+      margin: 0 !important;
+      display: flex;
+      color: inherit;
+      border: none;
+      border-radius: 0.8rem;
+    }
+  }
+
+  &__links {
+    display: flex;
+    list-style: none;
+    background-color: #efeef8;
+
+    li {
+      padding: 2rem 3.2rem;
+
+      a {
+        color: inherit;
+        font-size: 1.6rem;
+
+        &:hover {
+          color: #2a276e;
+        }
+
+        i {
+          margin-right: 1.2rem;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+
+  &__carousel {
+    position: relative;
+
+    &-img {
+      height: 100%;
+
+      img {
+        height: 100%;
+      }
+    }
+
+    &-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 64px;
+      height: 64px;
+      transition: 0.3s;
+      border: none;
+      outline: none;
+      background-color: rgba(255, 255, 255, 0.3);
+      position: absolute;
+      z-index: 1;
+
+      top: 50%;
+      transform: translateY(-50%);
+
+      img {
+        width: 50%;
+      }
+    }
+
+    .prev {
+      right: 5%;
+    }
+
+    .next {
+      left: 5%;
+    }
+  }
+}
+
+[nz-carousel-content] {
+  text-align: center;
+  height: 25vw;
+  color: #fff;
+  overflow: hidden;
+}
+
+.header-sm {
+  display: none;
+}
+
+@media screen and (max-width: 400px) {
+  .header-sm {
+    display: block;
+  }
+}

@@ -1,1 +1,102 @@
-<p>header works!</p>
+<header class="header">
+  <!-- <div class="header-sm">
+    <button nz-button nzType="primary" (click)="open()">Open</button>
+    <nz-drawer
+      [nzClosable]="false"
+      [nzVisible]="visible"
+      nzPlacement="right"
+      nzTitle="Basic Drawer"
+      (nzOnClose)="close()"
+    >
+      <ng-container *nzDrawerContent>
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+      </ng-container>
+    </nz-drawer>
+  </div> -->
+
+  <div class="header__actions">
+    <div class="header__actions-img">
+      <img src="assets/images/Path 224.svg" alt="logo" />
+    </div>
+
+    <nz-input-group class="header__actions-input" [nzPrefix]="suffixIconSearch">
+      <input type="text" nz-input placeholder="عم تبحث ؟" />
+    </nz-input-group>
+    <ng-template #suffixIconSearch>
+      <i nz-icon nzType="search" nzTheme="outline"></i>
+    </ng-template>
+
+    <div class="header__actions-user">
+      <img src="assets/images/person-24px.svg" alt="person" />
+    </div>
+
+    <button
+      nz-button
+      nzType="primary"
+      class="header__actions-cart"
+      [nzSize]="size"
+    >
+      سلة التسوق
+      <img nz-icon src="assets/images/shopping_cart-24px.svg" />
+    </button>
+  </div>
+
+  <nav>
+    <ul class="header__links">
+      <li>
+        <a nz-dropdown [nzDropdownMenu]="menu">
+          الأقسام
+          <i nz-icon nzType="down"></i>
+        </a>
+        <nz-dropdown-menu #menu="nzDropdownMenu">
+          <ul nz-menu nzSelectable>
+            <li nz-menu-item>الكترونيات</li>
+            <li nz-menu-item>معدات</li>
+            <li nz-menu-item>ازياء</li>
+            <li nz-menu-item>اثاث</li>
+          </ul>
+        </nz-dropdown-menu>
+      </li>
+      <li>
+        <a> الرئيسية </a>
+      </li>
+      <li>
+        <a>قائمة الامنيات </a>
+      </li>
+      <li>
+        <a>تواصل معنا </a>
+      </li>
+      <li>
+        <a>من نحن </a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="header__carousel">
+    <button
+      type="button"
+      class="header__carousel-btn prev"
+      (click)="carousel.pre()"
+    >
+      <img src="assets/images/chevron_right_white_24dp.svg" alt="pre" />
+    </button>
+
+    <button
+      type="button"
+      class="header__carousel-btn next"
+      (click)="carousel.next()"
+    >
+      <img src="assets/images/chevron_left_white_24dp.svg" alt="next" />
+    </button>
+
+    <nz-carousel #carousel nzAutoPlay [nzDots]="false" [nzAutoPlaySpeed]="4000">
+      <div nz-carousel-content *ngFor="let img of carouselImgs">
+        <div class="header__carousel-img">
+          <img [src]="'assets/images/' + img" [alt]="img" />
+        </div>
+      </div>
+    </nz-carousel>
+  </div>
+</header>

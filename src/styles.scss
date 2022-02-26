@@ -1,5 +1,10 @@
 @import "~ng-zorro-antd/ng-zorro-antd.min.css";
 
+:root {
+  font-size: 10px;
+  --primary-color: #302ca2;
+}
+
 *,
 *::after,
 *::before {
@@ -11,4 +16,22 @@
 body {
   font-family: "Cairo", sans-serif;
   box-sizing: border-box;
+}
+
+// .ant-drawer-content-wrapper {
+//   width: 100px !important;
+// }
+
+.ant-dropdown-menu-item {
+  font-size: 1.8rem;
+  padding: 0.8rem 2rem;
+}
+
+[nz-button] {
+  margin-right: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+
+nz-button-group [nz-button] {
+  margin-right: 0;
 }
