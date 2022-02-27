@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
-import { environment as env } from 'src/environments/environment';
+import { environment as env } from 'src/environments/environment.prod';
 import { Product } from './../models/product';
 
 @Injectable({
@@ -18,6 +18,6 @@ export class WatchedProdcutsService {
   }
 
   getUrl() {
-    return `${env.BASE_URL}/${this.model}`;
+    return `${env.BASE_URL}/${this.model}.json`;
   }
 }
