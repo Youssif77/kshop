@@ -18,9 +18,25 @@ body {
   box-sizing: border-box;
 }
 
-// .ant-drawer-content-wrapper {
-//   width: 100px !important;
-// }
+// Utilities
+.show-md {
+  display: none !important;
+}
+
+@media screen and (max-width: 668px) {
+  .show-md {
+    display: block !important;
+  }
+
+  .hide-md {
+    display: none !important;
+  }
+}
+
+// Override the style from zorro
+.ant-drawer-content-wrapper {
+  width: 60% !important;
+}
 
 .ant-dropdown-menu-item {
   font-size: 1.8rem;

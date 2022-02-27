@@ -15,11 +15,16 @@ import { ZorroModule } from './zorro.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
+import { ProductsListComponent } from './components/home/products-list/products-list.component';
+import { ProductItemComponent } from './components/home/product-item/product-item.component';
+import { CustomCurrencyPipe } from './shared/pipes/custom-currency.pipe';
+import { WatchedProductItemComponent } from './components/home/watched-product-item/watched-product-item.component';
+import { WatchedProductListComponent } from './components/home/watched-product-list/watched-product-list.component';
 
 registerLocaleData(ar);
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, HomeComponent],
+  declarations: [AppComponent, HeaderComponent, HomeComponent, ProductsListComponent, ProductItemComponent, CustomCurrencyPipe, WatchedProductItemComponent, WatchedProductListComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

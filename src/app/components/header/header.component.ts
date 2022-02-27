@@ -8,7 +8,8 @@ import { NzCarouselComponent } from 'ng-zorro-antd/carousel';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  carouselImgs = ['hero-img-1.png', 'hero-img-2.jpg', 'hero-img-3.png'];
+  @ViewChild('carousel') carousel!: NzCarouselComponent;
+  carouselImgs = ['hero-img-1.png', 'hero-img-2.jpeg', 'hero-img-3.png'];
 
   visible = false;
 
@@ -19,8 +20,4 @@ export class HeaderComponent {
   close(): void {
     this.visible = false;
   }
-
-  @ViewChild('carousel') carousel!: NzCarouselComponent;
-
-  size: NzButtonSize = 'large';
 }

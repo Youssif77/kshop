@@ -1,0 +1,17 @@
+<article class="watched-products">
+  <p class="watched-products__head">منتجات تصفحتها مؤخرا</p>
+
+  <div nz-row [nzGutter]="[16, 8]">
+    <div
+      nz-col
+      nzXs="24"
+      nzMd="12"
+      nzLg="24"
+      *ngFor="let watchedProducts of watchedProducts"
+    >
+      <app-watched-product-item
+        [product]="watchedProducts"
+      ></app-watched-product-item>
+    </div>
+  </div>
+</article>

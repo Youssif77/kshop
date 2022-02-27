@@ -1,50 +1,58 @@
 <header class="header">
-  <!-- <div class="header-sm">
-    <button nz-button nzType="primary" (click)="open()">Open</button>
-    <nz-drawer
-      [nzClosable]="false"
-      [nzVisible]="visible"
-      nzPlacement="right"
-      nzTitle="Basic Drawer"
-      (nzOnClose)="close()"
-    >
-      <ng-container *nzDrawerContent>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-      </ng-container>
-    </nz-drawer>
-  </div> -->
-
-  <div class="header__actions">
-    <div class="header__actions-img">
-      <img src="assets/images/Path 224.svg" alt="logo" />
+  <div nz-row nzAlign="middle">
+    <div class="show-md" nz-col nzSpan="2">
+      <button class="menu-icon" nz-button nzType="primary" (click)="open()">
+        <i nz-icon nzType="menu" nzTheme="outline"></i>
+      </button>
+      <nz-drawer
+        [nzClosable]="false"
+        [nzVisible]="visible"
+        nzPlacement="right"
+        (nzOnClose)="close()"
+      >
+        <ng-container *nzDrawerContent>
+          <p>الأقسام</p>
+          <p>الرئيسية</p>
+          <p>قائمة الامنيات</p>
+          <p>تواصل معنا</p>
+          <p>من نحن</p>
+        </ng-container>
+      </nz-drawer>
     </div>
 
-    <nz-input-group class="header__actions-input" [nzPrefix]="suffixIconSearch">
-      <input type="text" nz-input placeholder="عم تبحث ؟" />
-    </nz-input-group>
-    <ng-template #suffixIconSearch>
-      <i nz-icon nzType="search" nzTheme="outline"></i>
-    </ng-template>
+    <div class="header__actions" nz-col nzXs="22" nzMd="24">
+      <div class="header__actions-img">
+        <img src="assets/images/Path 224.svg" alt="logo" />
+      </div>
 
-    <div class="header__actions-user">
-      <img src="assets/images/person-24px.svg" alt="person" />
+      <nz-input-group
+        class="header__actions-input hide-md"
+        [nzPrefix]="suffixIconSearch"
+      >
+        <input type="text" nz-input placeholder="عم تبحث ؟" />
+      </nz-input-group>
+      <ng-template #suffixIconSearch>
+        <i nz-icon nzType="search" nzTheme="outline"></i>
+      </ng-template>
+
+      <div class="header__actions-user hide-md">
+        <img src="assets/images/person-24px.svg" alt="person" />
+      </div>
+
+      <button
+        nz-button
+        nzType="primary"
+        class="header__actions-cart"
+        nzSize="large"
+      >
+        سلة التسوق
+        <img nz-icon src="assets/images/shopping_cart-24px.svg" />
+      </button>
     </div>
-
-    <button
-      nz-button
-      nzType="primary"
-      class="header__actions-cart"
-      [nzSize]="size"
-    >
-      سلة التسوق
-      <img nz-icon src="assets/images/shopping_cart-24px.svg" />
-    </button>
   </div>
 
   <nav>
-    <ul class="header__links">
+    <ul class="header__links hide-md" nz-row>
       <li>
         <a nz-dropdown [nzDropdownMenu]="menu">
           الأقسام

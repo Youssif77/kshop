@@ -1,0 +1,35 @@
+.products {
+  &__head {
+    margin-bottom: 0.4rem;
+
+    h3 {
+      font-size: 2rem;
+    }
+
+    &-divider {
+      margin: 0 1.8rem;
+      background: #d4d4d4;
+      height: 0.1rem;
+      width: 100%;
+    }
+
+    &-btn {
+      color: #302ca2;
+      border-color: #302ca2;
+    }
+  }
+}
+
+@media screen and (max-width: 668px) {
+  .products {
+    &__head {
+      h3 {
+        font-size: 1.6rem;
+      }
+
+      &-divider {
+        margin: 0;
+      }
+    }
+  }
+}

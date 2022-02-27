@@ -8,8 +8,8 @@ import { Product } from './../models/product';
 @Injectable({
   providedIn: 'root',
 })
-export class ProdcutsService {
-  private model = 'products';
+export class WatchedProdcutsService {
+  private model = 'watched-products';
 
   constructor(private http: HttpClient) {}
 

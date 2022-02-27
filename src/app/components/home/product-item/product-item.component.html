@@ -1,0 +1,47 @@
+<div class="product">
+  <div class="product__img">
+    <button>
+      <img src="assets/images/compare_arrows_black_24dp.svg" alt="compare" />
+    </button>
+    <img [src]="'assets/images/' + product.image" [alt]="product.title" />
+    <button *ngIf="product.state == 'new'" class="new">جديد</button>
+    <button *ngIf="product.state == 'offer'" class="offer">عرض</button>
+  </div>
+
+  <p nz-typography nzEllipsis class="product__title">
+    {{ product.title }}
+  </p>
+
+  <nz-rate [ngModel]="product.rating"></nz-rate>
+
+  <p *ngIf="product.discount" class="product__discount">
+    <del>{{ product.discount | customCurrency }}</del>
+  </p>
+
+  <p class="product__price">{{ product.price | customCurrency }}</p>
+
+  <div
+    class="product__actions"
+    nz-row
+    nzAlign="middle"
+    nzJustify="space-between"
+  >
+    <button
+      nz-button
+      nzType="primary"
+      class="product__actions-btn"
+      nzSize="large"
+      nz-col
+      nzSpan="14"
+    >
+      <img nz-icon src="assets/images/add_shopping_cart-black-18dp.svg" />
+      أضف للسلة
+    </button>
+    <div nz-col nzSpan="3" nzOffset="4">
+      <img src="assets/images/share.svg" alt="share" />
+    </div>
+    <div nz-col nzSpan="3">
+      <img src="assets/images/favorite_border-24px.svg" alt="favorite" />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="watched-product" nz-row [nzGutter]="8">
+  <div nz-col nzSpan="8" class="watched-product__img">
+    <button>
+      <img src="assets/images/compare_arrows_black_24dp.svg" alt="compare" />
+    </button>
+    <img [src]="'assets/images/' + product.image" [alt]="product.title" />
+    <button *ngIf="product.state == 'new'" class="new">جديد</button>
+    <button *ngIf="product.state == 'offer'" class="offer">عرض</button>
+  </div>
+
+  <div nz-col nzSpan="16" class="watched-product__content">
+    <p nz-typography nzEllipsis>
+      {{ product.title }}
+    </p>
+    <p *ngIf="product.discount" class="watched-product__discount">
+      <del>{{ product.discount | customCurrency }}</del>
+    </p>
+
+    <p class="watched-product__price">{{ product.price | customCurrency }}</p>
+
+    <div class="watched-product__actions" nz-row>
+      <div nz-col nzSpan="3">
+        <img
+          src="assets/images/add_shopping_cart-black-18dp-1.svg"
+          alt="add to cart"
+        />
+      </div>
+      <div nz-col nzSpan="3" nzOffset="12">
+        <img src="assets/images/favorite_border-24px.svg" alt="favorite" />
+      </div>
+      <div nz-col nzSpan="3" nzOffset="2">
+        <img src="assets/images/share.svg" alt="share" />
+      </div>
+    </div>
+  </div>
+</div>

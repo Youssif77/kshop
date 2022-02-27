@@ -1,0 +1,30 @@
+<div class="products">
+  <div class="products__head" nz-row nzAlign="middle" nzJustify="space-between">
+    <h3 nz-col nzXs="6" nzSm="4" nzLg="4" nzXl="3">وصل حديثا</h3>
+    <div
+      class="products__head-divider"
+      nz-col
+      nzXs="10"
+      nzSm="12"
+      nzLg="14"
+      nzXl="15"
+    ></div>
+    <button
+      class="products__head-btn"
+      nz-button
+      nzType="default"
+      nz-col
+      nzXs="6"
+      nzLg="4"
+      nzXl="4"
+    >
+      عرض الكل
+    </button>
+  </div>
+
+  <div nz-row [nzGutter]="[16, 16]">
+    <div nz-col nzXs="12" nzMd="8" nzLg="6" *ngFor="let product of products">
+      <app-product-item [product]="product"></app-product-item>
+    </div>
+  </div>
+</div>

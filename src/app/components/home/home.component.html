@@ -1,1 +1,9 @@
-<p>home works!</p>
+<section class="home" nz-row [nzGutter]="{ lg: 24 }">
+  <div nz-col [nzXs]="{ order: 1, span: 24 }" [nzLg]="{ order: 0, span: 6 }">
+    <app-watched-product-list></app-watched-product-list>
+  </div>
+
+  <div nz-col nzSm="24" nzLg="18">
+    <app-products-list></app-products-list>
+  </div>
+</section>

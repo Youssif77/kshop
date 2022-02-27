@@ -1,0 +1,72 @@
+.watched-product {
+  background-color: #fff;
+  padding: 0.5rem;
+  border-radius: 1rem;
+
+  img {
+    width: 100%;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+  }
+
+  &__img {
+    position: relative;
+    padding-top: 0.8rem;
+
+    button {
+      position: absolute;
+
+      top: 0;
+      color: #fff;
+      border: none;
+      background: none;
+    }
+
+    .offer,
+    .new {
+      padding: 0.6rem 1.2rem;
+      left: 0;
+      border-radius: 1.6rem;
+      font-size: 1rem;
+    }
+
+    .new {
+      background-color: #23104e;
+    }
+    .offer {
+      background-color: #26a37c;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__discount {
+    font-size: 1rem;
+    color: #4844ad;
+  }
+
+  &__price {
+    font-size: 1rem;
+    color: #23104e;
+    font-weight: bold;
+  }
+
+  &__actions {
+    img {
+      width: 80%;
+    }
+  }
+}
+
+@media screen and (max-width: 811px) {
+  .watched-product__content {
+    gap: 0.8rem;
+  }
+}

@@ -1,0 +1,100 @@
+.product {
+  background-color: #fff;
+  padding: 0.5rem;
+  border-radius: 1rem;
+
+  img {
+    width: 100%;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__img {
+    position: relative;
+    padding-top: 0.8rem;
+
+    button {
+      position: absolute;
+
+      top: 0;
+      color: #fff;
+      border: none;
+      background: none;
+    }
+
+    .offer,
+    .new {
+      padding: 0.6rem 1.2rem;
+      left: 0;
+      border-radius: 1.6rem;
+      font-size: 1rem;
+    }
+
+    .new {
+      background-color: #23104e;
+    }
+    .offer {
+      background-color: #26a37c;
+    }
+  }
+
+  p.product__title {
+    margin: 1.2rem 0 0;
+  }
+
+  &__discount {
+    font-size: 1rem;
+    color: #4844ad;
+  }
+
+  &__price {
+    font-size: 1rem;
+    color: #23104e;
+    font-weight: bold;
+  }
+
+  &__actions {
+    width: 100%;
+    margin: 1rem 0;
+
+    img {
+      width: 80%;
+    }
+
+    &-btn {
+      background-color: #302ca2;
+      margin: 0 !important;
+
+      display: flex;
+      align-items: center;
+      gap: 0.2rem;
+      padding: 0;
+      padding-right: 0.5rem;
+      color: #fff;
+      border: none;
+      border-radius: 0.6rem;
+      font-size: 1.2rem;
+      height: 2.8rem;
+
+      img {
+        width: 15%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1081px) {
+  .product__actions-btn {
+    gap: 0;
+    // padding: 0 0.2rem;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 668px) {
+  .product__actions-btn {
+    gap: 1rem;
+  }
+}
